@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/**
+ * 全局样式 —— Apple Photos 极简风格。
+ * 系统字体、抗锯齿、浅色背景。
+ */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

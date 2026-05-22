@@ -70,9 +70,13 @@ export function getPhotoById(id: number): Photo | undefined {
   return photos.find((p) => p.id === id);
 }
 
-/** 获取照片的完整 URL（含 basePath 前缀） */
+/** 获取照片的完整 URL（含 basePath 前缀，文件名做 URL 编码） */
 export function getPhotoUrl(filename: string): string {
-  return `${BASE_PATH}/photos/${filename}`;
+  const encoded = filename
+    .split("/")
+    .map(encodeURIComponent)
+    .join("/");
+  return `${BASE_PATH}/photos/${encoded}`;
 }
 
 /** 将 null 统一为 "未知" */

@@ -83,7 +83,7 @@ function label(val: unknown): string {
 
 /** 获取统计面板数据 */
 export function getStats(): Stats {
-  const aggregate = (fn: (p: Photo) => string): StatItem[] => {
+  const aggregate = (fn: (p: Photo) => string | null): StatItem[] => {
     const map: Record<string, number> = {};
     for (const p of photos) {
       const key = label(fn(p));

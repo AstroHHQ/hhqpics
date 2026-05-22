@@ -8,7 +8,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ExifReader } = require("exifreader");
+const ExifReader = require("exifreader");
 const sizeOf = require("image-size");
 
 // 支持的扩展名
